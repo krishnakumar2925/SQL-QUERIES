@@ -1,0 +1,15 @@
+select count(LastName) as count_LN, count(firstname) as count_FN from emply
+
+select * from emplysalary
+
+select distinct(gender) from emply 
+
+select avg(salary) as avg_salary, max(salary) as max_salary, min(salary) as min_salary from emplysalary
+
+select * from emply where firstName = 'jim' and age >=30 and gender = 'female'
+
+select * from emply where firstName = 'jim' and age >=30 or gender = 'female'
+
+select * from emplysalary where emplyID in(1001, 1002)
+
+select * from emply where firstName is null
