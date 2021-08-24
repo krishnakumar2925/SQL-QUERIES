@@ -1,0 +1,9 @@
+select gender from emply group by gender
+
+select gender, count(gender) as count_gender from emply group by gender
+
+select gender, age, count(gender) as count_gender from emply group by gender, age
+
+select gender, count(gender) as count_gender from emply where age > 30 group by gender 
+
+select salary from emplysalary order by salary 
