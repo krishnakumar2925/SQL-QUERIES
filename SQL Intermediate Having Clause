@@ -1,0 +1,7 @@
+select role, avg(salary)
+from emply
+inner join emplysalary
+on emply.emplyID = emplysalary.emplyID
+group by role
+having avg(salary) >= 50000
+order by role
