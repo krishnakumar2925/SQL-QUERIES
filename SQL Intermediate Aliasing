@@ -1,0 +1,8 @@
+select * from emply
+
+select firstname + ' ' + lastname as fullname, salary
+from emply inner join emplysalary on emply.emplyID = emplysalary.emplyID
+
+
+select emp.firstname + ' ' + emp.lastname as fullname, sal.salary
+from emply as emp inner join emplysalary as sal on emp.emplyID = sal.emplyID
