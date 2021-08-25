@@ -1,0 +1,20 @@
+select Firstname, LastName, age,
+case
+	when age > 30 then 'old'
+	when age between 27 and 30 then 'young'
+	else 'kid'
+end as generation
+from emply
+where age is not null
+order by age
+
+
+select Firstname, LastName, role, salary,
+case 
+	when role = 'salesman' then salary+(salary*.10)
+	else salary+(salary*.5)
+end salary_rise
+from emply  inner join emplysalary 
+on emply.emplyID=emplysalary.emplyID
+where salary is not null
+order by salary
