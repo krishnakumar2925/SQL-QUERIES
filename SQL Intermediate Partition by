@@ -1,0 +1,10 @@
+select * from emply
+
+select firstname , lastname, salary, gender
+, count(gender) over (partition by gender) as total_gender
+from emply inner join emplysalary on emply.emplyID = emplysalary.emplyID
+
+
+select  gender, count(gender)
+from emply as emp inner join emplysalary as sal on emp.emplyID = sal.emplyID
+group by gender
