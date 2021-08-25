@@ -1,0 +1,22 @@
+Inner Joins
+
+select * from emply inner join emplysalary on emply.emplyID = emplysalary.emplyID
+
+select emply.emplyId, firstName, LastName, role, salary from emply inner join emplysalary on emply.emplyID = emplysalary.emplyID
+
+select role, avg(salary) as avg_salary from emply inner join emplysalary on emply.emplyID = emplysalary.emplyID where role = 'salesman' group by role
+
+
+Outer Joins
+
+Full Outer Joins
+
+select * from emply full outer join emplysalary on emply.emplyID = emplysalary.emplyID
+
+Left Outer Joins 
+
+select * from emply left outer join emplysalary on emply.emplyID = emplysalary.emplyID
+
+Right Outer Joins
+
+select * from emply right outer join emplysalary on emply.emplyID = emplysalary.emplyID
