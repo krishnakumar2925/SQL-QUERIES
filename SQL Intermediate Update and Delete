@@ -1,0 +1,8 @@
+select * from emply
+
+update emply
+set emplyId = 1012, age = 30, gender = 'female'
+where firstName = 'holly' and LastName = 'flax'
+
+delete from emply
+where emplyID=1013
